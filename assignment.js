@@ -29,16 +29,16 @@ function brickCalculator (inputFloorNum) {
         outputBriksNum = (inputFloorNum*15*1000);
     } 
     else if (inputFloorNum >= 11 && inputFloorNum <= 20) {
-        var firstTenth = (10*15*1000);
-        var remaining = (inputFloorNum-10);
-        var secondTenth = (remaining*12*1000);
+        let firstTenth = (10*15*1000);
+        let remaining = (inputFloorNum-10);
+        let secondTenth = (remaining*12*1000);
         outputBriksNum = (firstTenth+secondTenth);
     } 
     else {
-        var firstTenth = (10*15*1000);
-        var secondTenth = (10*12*1000);
-        var remaining = (inputFloorNum-20);
-        var nextFloors = (remaining*10*1000);
+        let firstTenth = (10*15*1000);
+        let secondTenth = (10*12*1000);
+        let remaining = (inputFloorNum-20);
+        let nextFloors = (remaining*10*1000);
         outputBriksNum = (firstTenth+secondTenth+nextFloors);
     }
   return outputBriksNum;
