@@ -29,14 +29,21 @@ function brickCalculator (inputFloorNum) {
         outputBriksNum = (inputFloorNum*15*1000);
     } 
     else if (inputFloorNum >= 11 && inputFloorNum <= 20) {
-        outputBriksNum = (inputFloorNum*12*1000);
+        var firstTenth = (10*15*1000);
+        var remaining = (inputFloorNum-10);
+        var secondTenth = (remaining*12*1000);
+        outputBriksNum = (firstTenth+secondTenth);
     } 
     else {
-        outputBriksNum = (inputFloorNum*10*1000);
+        var firstTenth = (10*15*1000);
+        var secondTenth = (10*12*1000);
+        var remaining = (inputFloorNum-20);
+        var nextFloors = (remaining*10*1000);
+        outputBriksNum = (firstTenth+secondTenth+nextFloors);
     }
   return outputBriksNum;
 }
-console.log(brickCalculator(5));
+console.log(brickCalculator(22));
 
 
 // Solution of 4th problem:
